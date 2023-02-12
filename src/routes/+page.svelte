@@ -20,9 +20,15 @@
 <style lang="postcss">
 
 #lastname{
-    font-size: 83px;
+    font-size: 128px;
     font-weight: 1000;
     color: black;
+    letter-spacing: 4px;
+}
+h3{
+    font-size: 24px;
+    font-weight: 600;
+    margin-top: -12px;
 }   
 
 </style>
