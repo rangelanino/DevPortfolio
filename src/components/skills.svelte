@@ -1,31 +1,38 @@
-<div id="container" class="py-12 mx-auto w-16 md:w-32 lg:w-48">
-    <h1 style="font-size: 32px"> Core Competencies</h1>
-    <div id="outer" class="flex">
-        <div id="inner">
-            <ul>
-                <li id="head">Languages</li>
-                {#each languages as lang, i}
-                <li class="py-2"> {lang} </li>
-                {/each}
-            </ul>
-        </div>
-        <div id="inner">
-            <ul>
-                <li id="head">Analytics</li>
-                {#each data_engg as engg, i}
-                <li class="py-2"> {engg} </li>
-                {/each}
-            </ul>    
-        </div>
-        <div id="inner">
-            <ul>
-                <li id="head">Dev Tools</li>
-                {#each dev_tools as tool, i}
-                <li class="py-2"> {tool} </li>
-                {/each}
-            </ul>    
+<div class="grid grid-cols-3 gap-4 p-4 mx-auto">
+    <div class="col-span-3">
+        <div class ="flex">
+            <div class="px-5 bg-slate-200 rounded-2xl shadow-xl">
+                <h1> Core Competencies</h1>
+            </div>
+            <div>
+            </div>   
         </div>
     </div>
+    <div class="col-start-1">
+        <ul class="bg-slate-200 rounded-2xl shadow-xl">
+            <li id="head" class="my-2">Languages</li>
+            {#each languages as lang, i}
+            <li class="py-2"> {lang} </li>
+            {/each}
+        </ul>
+    </div>
+    <div class="col-start-2">
+        <ul class="bg-slate-200 rounded-2xl shadow-xl">
+            <li id="head" class="my-2">Analytics</li>
+            {#each data_engg as engg, i}
+            <li class="py-2"> {engg} </li>
+            {/each}
+        </ul>    
+    </div>
+    <div class="col-start-3">
+        <ul class="bg-slate-200 rounded-2xl shadow-xl">
+            <li id="head" class="my-2">Dev Tools</li>
+            {#each dev_tools as tool, i}
+            <li class="py-2"> {tool} </li>
+            {/each}
+        </ul>    
+    </div>    
+    
 </div>
 
 <script>
@@ -38,34 +45,13 @@ const dev_tools = ["Docker", "Airflow", "Kubernetes",
 </script>
 
 <style lang="postcss">
-
-#container{
-    display: table;
-    margin-right: auto;
-    margin-left: auto;
-}
-#outer{
-    flex-direction: row;
-}
-#inner{
-    margin-top: 1em;
-}
 #head {
     font-size: 32px;
-    font-weight: 800;
+    font-weight: 900;
 }
 
-@media (max-width:1100px){
-    #outer {
-        flex-direction: column;
-    }
-}
-
-ul {
-    min-width: 20em;
-}
 h1{
-    font-size: 100px;
+    font-size: 39px;
     font-weight: 900;
 }
 li {
